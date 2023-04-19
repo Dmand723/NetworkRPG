@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngineInternal;
 
@@ -10,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask layerMaskinteract;
     public CameraController Camera;
     public AudioSource audioSource;
+    private RaycastHit hit;
+    private Interactable interactable;
 
     [Header("movemnet stats")]
     public float moveSpeed;
@@ -28,6 +31,9 @@ public class PlayerController : MonoBehaviour
     public int damageDelt;
     public int shotsFired;
     public int shotsHit;
+
+    [Header("Debug")]
+    public bool debug;
 
     private void Awake()
     {
@@ -99,11 +105,22 @@ public class PlayerController : MonoBehaviour
 
     public void Tryinteract()
     {
-        Ray hit = new Ray(Camera.transform.position, Camera.transform.forward);
+        if(debug)
+        {
+            //Debug.DrawRay
+        }
+
+        if(Physics.Raycast(Camera.transform.position, Camera.transform.forward, .5f, layerMaskinteract))
+        {
+            interactable = hit.collider.GetComponent<Interactable>();
+            interactable.Interact.Invoke();
+        }
+
+        /*Ray hit = new Ray(Camera.transform.position, Camera.transform.forward);
         if (Physics.Raycast(hit, 1.5f, layerMaskinteract))
         {
             
-        }
+        }*/
 
 
     }

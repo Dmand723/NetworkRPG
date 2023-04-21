@@ -6,4 +6,9 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     public UnityEvent Interact;
+
+    public void test()
+    {
+        print("interacted");
+    }
 }

@@ -237,6 +237,7 @@ MonoBehaviour:
   damageDelt: 0
   shotsFired: 0
   shotsHit: 0
+  debug: 0
 --- !u!54 &181715648
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1685,6 +1686,134 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 037703f23e386d74f914da3f126fc38a, type: 3}
+--- !u!1 &1392047517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1886506300135074668, guid: 037703f23e386d74f914da3f126fc38a, type: 3}
+  m_PrefabInstance: {fileID: 1392047516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1392047518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1886506301514242648, guid: 037703f23e386d74f914da3f126fc38a, type: 3}
+  m_PrefabInstance: {fileID: 1392047516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1392047519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1886506300429974802, guid: 037703f23e386d74f914da3f126fc38a, type: 3}
+  m_PrefabInstance: {fileID: 1392047516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1392047520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1886506301210428935, guid: 037703f23e386d74f914da3f126fc38a, type: 3}
+  m_PrefabInstance: {fileID: 1392047516}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1392047521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392047517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d402a5aa3f1b6644c88fd3f5c34ba3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Interact:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1392047522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392047518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d402a5aa3f1b6644c88fd3f5c34ba3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Interact:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1392047523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392047519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d402a5aa3f1b6644c88fd3f5c34ba3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Interact:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1392047524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392047520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d402a5aa3f1b6644c88fd3f5c34ba3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Interact:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1392047524}
+        m_TargetAssemblyTypeName: Interactable, Assembly-CSharp
+        m_MethodName: test
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1439879107
 PrefabInstance:
   m_ObjectHideFlags: 0

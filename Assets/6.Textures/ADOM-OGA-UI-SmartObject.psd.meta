@@ -209,7 +209,7 @@ TextureImporter:
         width: 84
         height: 133
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 26, y: 37, z: 25, w: 41}
       outline: []
       physicsShape: []
@@ -217,6 +217,27 @@ TextureImporter:
       bones: []
       spriteID: 6ac434415b82d7d4292aca6d0ea4fd83
       internalID: 1765705929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ADOM-OGA-UI-SmartObject_5
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 940
+        width: 530
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8583eddbc79fe4043af1170e5f92d5c3
+      internalID: 1493764062
       vertices: []
       indices: 
       edges: []
@@ -237,6 +258,7 @@ TextureImporter:
       ADOM-OGA-UI-SmartObject_2: -364474066
       ADOM-OGA-UI-SmartObject_3: -1458265407
       ADOM-OGA-UI-SmartObject_4: 1765705929
+      ADOM-OGA-UI-SmartObject_5: 1493764062
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1

@@ -6,14 +6,13 @@ using UnityEngineInternal;
 
 public class PlayerController : MonoBehaviour
 {
+    #region Componets
     [Header("Components")]
     public Rigidbody rig;
     public LayerMask layerMaskinteract;
     public CameraController Camera;
     public AudioSource audioSource;
-    private RaycastHit hit;
-    private Interactable interactable;
-
+    public GameObject Inventory;
     [Header("movemnet stats")]
     public float moveSpeed;
     public float jumpForce;
@@ -32,8 +31,12 @@ public class PlayerController : MonoBehaviour
     public int shotsFired;
     public int shotsHit;
 
+    [Header("Options")]
+    public ValueAttribute InteractButton;
+
     [Header("Debug")]
     public bool debug;
+    #endregion
 
     private void Awake()
     {
@@ -44,7 +47,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Inventory.SetActive(false);
     }
 
     // Update is called once per frame
@@ -54,6 +57,18 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             tryJump();  
+        }
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            Tryinteract();
+        }
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            Inventory.SetActive(true);
+        }
+        if(Input.GetKeyUp(KeyCode.Tab))
+        {
+            Inventory.SetActive(false);
         }
     }
 
@@ -105,23 +120,26 @@ public class PlayerController : MonoBehaviour
 
     public void Tryinteract()
     {
-        if(debug)
-        {
-            //Debug.DrawRay
-        }
 
-        if(Physics.Raycast(Camera.transform.position, Camera.transform.forward, .5f, layerMaskinteract))
+        Ray ray = new Ray(new Vector3(this.transform.position.x, this.transform.position.y+1, this.transform.position.z), Camera.transform.forward*1);
+        RaycastHit hit;
+        if(Physics.Raycast(ray, out hit, 10))
         {
-            interactable = hit.collider.GetComponent<Interactable>();
-            interactable.Interact.Invoke();
-        }
-
-        /*Ray hit = new Ray(Camera.transform.position, Camera.transform.forward);
-        if (Physics.Raycast(hit, 1.5f, layerMaskinteract))
-        {
+            if(hit.transform.gameObject.CompareTag("Interactable"))
+            {
+                 hit.transform.gameObject.GetComponent<Interactable>().Interact.Invoke();
+            }
             
-        }*/
+        }
+
+        if (debug)
+        {
+            print("draw?");
+            Debug.DrawRay(this.transform.position, Camera.transform.forward * 3, Color.red, 2);
+        }
+
 
 
     }
+   
 }

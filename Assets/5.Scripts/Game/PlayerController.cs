@@ -123,7 +123,7 @@ public class PlayerController : MonoBehaviour
 
         Ray ray = new Ray(new Vector3(this.transform.position.x, this.transform.position.y+1, this.transform.position.z), Camera.transform.forward*1);
         RaycastHit hit;
-        if(Physics.Raycast(ray, out hit, 10))
+        if(Physics.SphereCast(ray,5, out hit, 10))
         {
             if(hit.transform.gameObject.CompareTag("Interactable"))
             {

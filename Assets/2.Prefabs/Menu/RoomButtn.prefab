@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1884461203729012790}
   - component: {fileID: 1884461203729012791}
   m_Layer: 5
-  m_Name: RoomName
+  m_Name: roomNameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 1884461204006162400}
   - component: {fileID: 1884461204006162401}
   m_Layer: 5
-  m_Name: Players
+  m_Name: playerCountText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,8 +254,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 49.756, y: 0}
-  m_SizeDelta: {x: 120.0005, y: 50}
+  m_AnchoredPosition: {x: 82.03316, y: 0}
+  m_SizeDelta: {x: 55.4462, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1884461204006162400
 CanvasRenderer:

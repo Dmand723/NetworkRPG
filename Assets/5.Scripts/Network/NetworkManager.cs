@@ -50,15 +50,21 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         print("we have joined " + PhotonNetwork.CurrentRoom.Name);
     }
 
-    public override void OnJoinedLobby()
+    /*public override void OnJoinedLobby()
     {
         print("joined the lobby" + PhotonNetwork.CurrentRoom.Name);
         print(PhotonNetwork.GetPing().ToString());
-    }
+    }*/
 
+    [PunRPC]
     public void changeScenes(string sceneName)
     {
         PhotonNetwork.LoadLevel(sceneName);
+    }
+
+    public void onQuitBttn()
+    {
+        Application.Quit();
     }
 }
 

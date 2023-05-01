@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngineInternal;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviourPun 
 {
     #region Componets
     [Header("Components")]
@@ -13,6 +15,9 @@ public class PlayerController : MonoBehaviour
     public CameraController Camera;
     public AudioSource audioSource;
     public GameObject Inventory;
+    public int punID;
+    public Player photonPlayer;
+
     [Header("movemnet stats")]
     public float moveSpeed;
     public float jumpForce;
@@ -43,6 +48,7 @@ public class PlayerController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         rig = GetComponent<Rigidbody>();
         Camera = GetComponentInChildren<CameraController>();
+        
     }
     // Start is called before the first frame update
     void Start()
@@ -69,6 +75,20 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Tab))
         {
             Inventory.SetActive(false);
+        }
+    }
+
+    [PunRPC]
+    public void Initialize(Player player)
+    {
+        punID = player.ActorNumber;
+        photonPlayer = player;
+        GameManager.Instance.players[punID - 1] = this;
+
+        if(!photonView.IsMine)
+        {
+            GetComponentInChildren<Camera>().gameObject.SetActive(false);
+            rig.isKinematic = true;
         }
     }
 

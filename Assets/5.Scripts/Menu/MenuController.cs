@@ -307,6 +307,13 @@ public class MenuController : MonoBehaviourPunCallbacks, ILobbyCallbacks
         {
             bttn.SetActive(false);
         }
+        foreach (RoomInfo room in roomInfoList)
+        {
+            if (room.PlayerCount <= 0)
+            {
+                roomInfoList.Remove(room);
+            }
+        }
         for(int i = 0;i < roomInfoList.Count;i++)
         {
             GameObject bttn = i >= roomButtonList.Count ? createNewRoomBttn(): roomButtonList[i];

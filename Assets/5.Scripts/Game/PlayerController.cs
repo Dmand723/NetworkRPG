@@ -99,9 +99,9 @@ public class PlayerController : MonoBehaviourPun
         float z = Input.GetAxis("Vertical");
 
         Vector3 dir = (transform.forward * z + transform.right * x) * moveSpeed;
-        dir.y = rig.velocity.y;
+        dir.y = rig.linearVelocity.y;
 
-        rig.velocity = dir;
+        rig.linearVelocity = dir;
     }
 
     private void tryJump()
